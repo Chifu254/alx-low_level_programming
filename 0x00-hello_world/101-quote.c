@@ -13,5 +13,4 @@ n = write(STDERR_FILENO,
 59);
 if (n == -1)
 return (1);
-return (0);
 }
