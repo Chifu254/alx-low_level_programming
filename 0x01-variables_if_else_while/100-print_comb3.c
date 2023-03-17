@@ -3,7 +3,7 @@
  * main - prints all possible different combinations of two digits
  * Return:Always 0
  */
-int main(voi)
+int main(void)
 {
 	int n, m;
 
