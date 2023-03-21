@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include <main.h>
 /**
  * main - prints _putchar
  * is written by mbah
