@@ -1,31 +1,25 @@
 #include <stdio.h>
 
 /**
-*main - Prints the first 52 fibonacci numbers
-*
-*Return: Nothing!
+*main - main block
+*Description: Print the sum of even Fibonacci numbers up to a fib value
+*not exceeding 4,000,000.
+*Return: 0
 */
 int main(void)
 {
-	int i = 0;
-	long j = 1, k = 2;
+	int i = 1, j = 2, total = 0;
+	int k;
 
-	while (i < 50)
+	while (j < 4000000)
 	{
-		if (i == 0)
-			printf("%ld", j);
-		else if (i == 1)
-			printf(", %ld", k);
-		else
-		{
-			k += j;
-			j = k - j;
-			printf(", %ld", k);
-		}
+		if (j % 2 == 0)
+			total += j;
 
-		++i;
+		k = j;
+		j += i;
+		i = k;
 	}
-
-	printf("\n");
+	printf("%d\n", total);
 	return (0);
 }
