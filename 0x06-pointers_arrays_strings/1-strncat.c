@@ -9,20 +9,23 @@
  *
  * Return: This is my return
  */
-char *_strncat(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n)
 {
-	int index, count;
+	int i;
+	int j;
 
-	for (index = 0; dest[index] != '\0'; index++)
-
-	for (count = 0; count < n && src[count] != '\0'; count++)
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest[index] = src[count];
-		index++;
+		i++;
 	}
-	if (count < n)
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-	dest[index] = '\0';
+	dest[i] = src[j];
+	i++;
+	j++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
